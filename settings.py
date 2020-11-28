@@ -6,7 +6,7 @@ import os
 
 import dotenv
 
-dotenv.load_dotenv(dotenv_path='.env')
+dotenv.load_dotenv(dotenv_path='.env', encoding='utf-8')
 
 formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
 
@@ -36,5 +36,5 @@ MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
 MYSQL_DB = os.getenv('MYSQL_DB')
 MYSQL_CHARSET = os.getenv('MYSQL_CHARSET')
 
-SELECT_SQL = os.getenv('SELECT_SQL')
+SELECT_SQL = open(r'run.sql', mode='r', encoding='utf-8').read()
 INSERT_INTO_TABLE = os.getenv('INSERT_INTO_TABLE')

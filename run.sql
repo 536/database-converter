@@ -1,0 +1,1 @@
+select countrycode, '中文' as language, isofficial, trim(percentage) as percentage from countrylanguage

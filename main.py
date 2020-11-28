@@ -1,15 +1,10 @@
 # !/usr/bin/env python3
 # coding: utf-8
-import os
-
 import settings
 from libs.mysql import conn as mysql_conn
 from libs.oracle import conn as oracle_conn
 
 from settings import logger
-
-# 防止读取结果出现中文乱码（问号）情况
-os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 
 
 def to_str(string):

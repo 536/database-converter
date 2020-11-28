@@ -11,7 +11,9 @@ conn = cx_Oracle.connect(
         settings.ORACLE_HOST,
         int(settings.ORACLE_PORT),
         settings.ORACLE_DB,
-    )
+    ),
+    encoding='UTF-8',
+    nencoding='UTF-8'
 )
 
 __all__ = ['conn']
