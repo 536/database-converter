@@ -9,7 +9,7 @@ from settings import logger
 
 def to_str(string):
     if string is None:
-        return "''"
+        return 'null'
     else:
         return "'" + str(string) + "'"
 
